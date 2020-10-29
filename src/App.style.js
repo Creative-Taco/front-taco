@@ -42,7 +42,7 @@ Section.Container = styled.main`
 Section.TacoIcon = styled.img`
     position: absolute;
     top 3.5%;
-    left: 6.7%;
+    left: 45px;
 `;
 
 Section.ScrollDownText = styled.p`
