@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { devices, sizes} from './styles/index.style' 
+import { devices, sizes} from '../../styles/index.style' 
 // import {useSpring, animated} from 'react-spring';
 
-const Section = {};
+const Landing = {};
 
-Section.Container = styled.main`
+Landing.Container = styled.main`
     margin: 90px 48px 0;
     background: #fff;
     height: 80vh;
@@ -19,7 +19,7 @@ Section.Container = styled.main`
 
 `;
 
-Section.ScrollDownText = styled.p`
+Landing.ScrollDownText = styled.p`
     position: absolute;
     width: 64px;
     height: 11px;
@@ -37,17 +37,17 @@ Section.ScrollDownText = styled.p`
     transform: rotate(-90deg);
 `;
 
-Section.ScrollDownImage = styled.img`
+Landing.ScrollDownImage = styled.img`
     position: absolute;
     left: 63px;
     top: 73.5%;
 `; 
 
-Section.HeroContainer = styled.div`
+Landing.HeroContainer = styled.div`
     height: 100%;
 `; 
 
-Section.HeroText = styled.div`
+Landing.HeroText = styled.div`
     position: absolute;
     width: 758px;
     height: 208px;
@@ -69,19 +69,19 @@ Section.HeroText = styled.div`
     }
 `;
 
-Section.HeroFullStop = styled.span`
+Landing.HeroFullStop = styled.span`
     color: #002A73;
 `;
 
-Section.BlueBox = styled.div`
+Landing.BlueBox = styled.div`
     background-color: #002A73;
     width: 50%; 
     height: 100%;
 `;
 
-Section.TacoMask = styled.img`
+Landing.TacoMask = styled.img`
     height: 100%;
     width: 100%;
     object-fit: cover
 `;
-export default Section;
+export default Landing;

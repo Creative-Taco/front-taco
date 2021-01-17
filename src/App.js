@@ -1,26 +1,22 @@
-import Section from './App.style';
-import tacoLogo from './images/tacologo.svg';
-import arrowDown from './images/arrowdown.svg';
-import tacoMask from './images/tacomasklarge.svg';
+
+import Layout from './layout/Layout';
+import Landing from './views/Landing/Landing';
+import About from './views/About/About';
+import Example from './views/Example/Example';
+import Good from './views/Good/Good';
+import Mission from './views/Mission/Mission';
+import Team from './views/Team/Team';
 
 function App() {
   return (
-    <Section.Container> {/* Main app container */}
-
-      <Section.TacoIcon src={ tacoLogo } alt="" />      
-      <Section.ScrollDownText>SCROLL</Section.ScrollDownText>
-      <Section.ScrollDownImage src={ arrowDown } alt="" />
-
-      <Section.HeroContainer> {/* hero container */}
-        <Section.HeroText> {/* text overlay */}
-          HELLO<Section.HeroFullStop>.</Section.HeroFullStop>
-        </Section.HeroText>
-        <Section.BlueBox>
-          <Section.TacoMask src={tacoMask} alt="" /> {/* taco mask */}
-        </Section.BlueBox>
-      </Section.HeroContainer>
-
-    </Section.Container>
+      <Layout>
+        <Landing />
+        <About />
+        <Example />
+        <Good />
+        <Team />
+        <Mission />
+      </Layout>
   );
 }
 
