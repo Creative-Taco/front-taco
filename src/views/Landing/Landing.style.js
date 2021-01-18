@@ -5,7 +5,7 @@ import { devices } from '../../styles/index.style'
 const Landing = {};
 
 Landing.Container = styled.main`
-    margin: 90px 48px 0;
+    margin: 92px 44px 0;
     background: #fff;
     height: 80vh;
 
@@ -18,30 +18,6 @@ Landing.Container = styled.main`
     }
 
 `;
-
-Landing.ScrollDownText = styled.p`
-    position: absolute;
-    width: 64px;
-    height: 11px;
-    left: 34px;
-    top: 620px;
-
-    font-family: Montserrat, Verdana, sans-script;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.06em;
-
-    color: #fff;
-    transform: rotate(-90deg);
-`;
-
-Landing.ScrollDownImage = styled.img`
-    position: absolute;
-    left: 63px;
-    top: 73.5%;
-`; 
 
 Landing.HeroContainer = styled.div`
     height: 625px;

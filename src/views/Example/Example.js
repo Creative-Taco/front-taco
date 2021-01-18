@@ -1,8 +1,12 @@
+import exampleImg from '../../images/example.png';
+import Example from './Example.style';
+
+
 function App() {
   return (
-    <div>
-        Example Section
-    </div>
+    <Example.Container>
+        <Example.ExampleImage src={exampleImg} />
+    </Example.Container>
   );
 }
 

@@ -1,14 +1,9 @@
 import Landing from './Landing.style';
-import arrowDown from '../../images/arrowdown.svg';
 import tacoMask from '../../images/tacomasklarge.svg';
 
 function LandingView() {
   return (
     <Landing.Container> {/* Main app container */}
-        
-      <Landing.ScrollDownText>SCROLL</Landing.ScrollDownText>
-      <Landing.ScrollDownImage src={ arrowDown } alt="" />
-
       <Landing.HeroContainer> {/* hero container */}
         <Landing.HeroText> {/* text overlay */}
           HELLO<Landing.HeroFullStop>.</Landing.HeroFullStop>
