@@ -30,23 +30,10 @@ Landing.HeroText = styled.div`
     left: 365px;
     top: 385px;
 
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 200px;
-    line-height: 300px;
-
-    /* F56B00 */
-
-    color: #F56B00;
     @media ${devices.tablet} {
         top: 55%;
         font-size: 100px;
     }
-`;
-
-Landing.HeroFullStop = styled.span`
-    color: #002A73;
 `;
 
 Landing.BlueBox = styled.div`
