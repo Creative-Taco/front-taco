@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Good = {};
 
 Good.Container = styled.div`
-  margin: 200px 0 0 200px;
+  margin: 199px 0 0 191px;
 `;
 
 Good.Title = {
@@ -11,9 +11,7 @@ Good.Title = {
     max-width: 700px;
   `,
   TitleText: styled.div`
-    font-weight: 800;
-    font-size: 80px;
-    line-height: 90%;
+    line-height: 80px;
     color: #f56b00;
   `,
   FullStop: styled.span`
@@ -23,16 +21,9 @@ Good.Title = {
 
 Good.Explanation = {
   Section: styled.div``,
-  Flex: {
-    Container: styled.div`
-      margin-top: 32px;
-      display: flex;
-    `,
-    Item: styled.div``,
-  },
   Title: {
     Section: styled.div`
-      margin-top: 90px;
+      margin-top: 80px;
     `,
     Bold: styled.div`
       font-size: 30px;
@@ -41,14 +32,22 @@ Good.Explanation = {
     `,
     Emphasis: styled.div`
       font-size: 30px;
+      line-height: 26px;
       color: #002a73;
       font-style: italic;
       font-family: Libre Baskerville, Georgia;
     `,
   },
+  Flex: {
+    Container: styled.div`
+      margin-top: 22px;
+      display: flex;
+    `,
+    Item: styled.div``,
+  },
   SubTitle: {
     Section: styled.div`
-      margin-top: 100px;
+      margin-top: 90px;
       max-width: 290px;
     `,
     Title: styled.div`
@@ -61,22 +60,25 @@ Good.Explanation = {
   },
   Block: {
     Container: styled.div`
-      margin-left: 180px;
+      margin-left: 186px;
       max-width: 720px;
-      height: 600px;
       max-height: 600px;
       background-color: #002a73;
-      padding-bottom: 20px;
+      padding: 80px 50px 20px 68px;
+
     `,
     Wrapper: styled.div`
-      padding: 80px 0 0 60px;
       display: flex;
       flex-wrap: wrap;
       max-width: 600px;
     `,
-    Box: styled.div`
+    BoxLeft: styled.div`
       min-width: 250px;
-      margin: 0 40px 80px 0;
+      margin: 0 36px 80px 0;
+    `,
+    BoxRight: styled.div`
+      min-width: 250px;
+      margin: 0 15px 80px 0;
     `,
     Title: styled.div`
       margin-bottom: 16px;
@@ -87,6 +89,7 @@ Good.Explanation = {
     List: styled.div`
       font-size: 22px;
       color: #fff;
+      line-height: 120%;
     `,
     Item: styled.div``,
   },

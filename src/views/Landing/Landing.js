@@ -7,7 +7,7 @@ function LandingView() {
     <Landing.Container>
       <Landing.HeroContainer>
         <Landing.HeroText>
-          <HeroText displayText={'HELLO'} fullStop={true} size={200} />
+          <HeroText text={'HELLO'} fullStop={true} size={200} />
         </Landing.HeroText>
         <Landing.BlueBox>
           <Landing.TacoMask src={tacoMask} alt='' />

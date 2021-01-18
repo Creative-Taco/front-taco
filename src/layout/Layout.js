@@ -4,7 +4,7 @@ import Scroll from './Scroll/Scroll';
 
 function Layout(props) {
     return (
-      <div>
+      <div style={{fontFamily: 'Poppins'}}> 
           <Header />
           <Scroll />
           {props.children}

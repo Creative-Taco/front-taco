@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
-const HeroText = ({ displayText, fullStop, size }) => {
+const HeroText = ({ text, fullStop, size }) => {
     const TitleText = styled.div`
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-size: ${size}px;
-    line-height: 300px;
   
     /* F56B00 */
   
@@ -20,7 +19,7 @@ const HeroText = ({ displayText, fullStop, size }) => {
   return (
     <>
       <TitleText>
-        {displayText}
+        {text}
         {fullStop ? <TitleFullStop>.</TitleFullStop> : null}
       </TitleText>
     </>
