@@ -11,7 +11,6 @@ Good.Title = {
     max-width: 700px;
   `,
   TitleText: styled.div`
-    line-height: 80px;
     color: #f56b00;
   `,
   FullStop: styled.span`

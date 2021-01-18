@@ -6,6 +6,7 @@ const HeroText = ({ text, fullStop, size }) => {
     font-style: normal;
     font-weight: 800;
     font-size: ${size}px;
+    line-height: 80px;
   
     /* F56B00 */
   
