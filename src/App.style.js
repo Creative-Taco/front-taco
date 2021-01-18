@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices, sizes} from './styles/index.style' 
+import { devices } from './styles/index.style' 
 // import {useSpring, animated} from 'react-spring';
 
 const Section = {};

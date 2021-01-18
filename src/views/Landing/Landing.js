@@ -2,7 +2,7 @@ import Landing from './Landing.style';
 import arrowDown from '../../images/arrowdown.svg';
 import tacoMask from '../../images/tacomasklarge.svg';
 
-function App() {
+function LandingView() {
   return (
     <Landing.Container> {/* Main app container */}
         
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default LandingView;

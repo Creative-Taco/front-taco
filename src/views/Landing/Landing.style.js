@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices, sizes} from '../../styles/index.style' 
+import { devices } from '../../styles/index.style' 
 // import {useSpring, animated} from 'react-spring';
 
 const Landing = {};
@@ -44,15 +44,15 @@ Landing.ScrollDownImage = styled.img`
 `; 
 
 Landing.HeroContainer = styled.div`
-    height: 100%;
+    height: 625px;
 `; 
 
 Landing.HeroText = styled.div`
     position: absolute;
     width: 758px;
     height: 208px;
-    left: 25%;
-    top: 55%;
+    left: 365px;
+    top: 385px;
 
     font-family: Poppins;
     font-style: normal;
