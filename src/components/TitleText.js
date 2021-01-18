@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeroText = ({ text, fullStop, size }) => {
+const HeroText = ({ text, fullStop, size, reversed }) => {
     const TitleText = styled.div`
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -10,11 +10,11 @@ const HeroText = ({ text, fullStop, size }) => {
   
     /* F56B00 */
   
-    color: #f56b00;
+    color: ${reversed ? '#002a73': '#f56b00'};
   `;
   
   const TitleFullStop = styled.span`
-    color: #002a73;
+  color: ${reversed ? '#f56b00' : '#002a73'};
   `;
 
   return (
