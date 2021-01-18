@@ -5,7 +5,7 @@ const About = {};
 
 About.Container = styled.div`
     height: 600px;
-    margin: 48px;
+    margin: 44px;
 `;
 
 About.BlueBox = styled.div`

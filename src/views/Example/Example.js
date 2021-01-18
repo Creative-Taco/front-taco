@@ -2,7 +2,7 @@ import exampleImg from '../../images/example.png';
 import Example from './Example.style';
 
 
-function App() {
+function ExampleView() {
   return (
     <Example.Container>
         <Example.ExampleImage src={exampleImg} />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default ExampleView;
