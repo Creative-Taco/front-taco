@@ -60,7 +60,7 @@ Team.Main = {
     Title: styled.div`
       font-family: Libre Baskerville, Georgia;
       font-size: 30px;
-      color: #F56B00;
+      color: #f56b00;
       font-style: italic;
       margin-top: 24px;
     `,
@@ -73,7 +73,7 @@ Team.Main = {
     Spacer: styled.div`
       margin-top: 464px;
       font-weight: 500;
-    `
+    `,
   },
 };
 
