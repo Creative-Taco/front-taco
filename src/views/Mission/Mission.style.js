@@ -13,7 +13,10 @@ Mission.Title = styled.div`
   left: 220px;
 `;
 
-Mission.Banner = styled.img``;
+Mission.Banner = styled.img`
+  width: 100%;
+  height: auto;
+`;
 
 Mission.Block = {
   Container: styled.div`

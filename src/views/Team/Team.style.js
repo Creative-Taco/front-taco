@@ -58,23 +58,8 @@ Team.Main = {
       margin-top: 64px;
     `,
     Image: styled.img`
-    max-width: 430px;
-
-      @media ${devices.laptopL} {
-        max-width: 350px;
-      }
-
-      @media ${devices.laptopM} {
-        max-width: 300px;
-      }
-
-      @media ${devices.laptop} {
-        max-width: 250px;
-      }
-
-      @media ${devices.tablet} {
-        max-width: 200px;
-      }
+    width: 100%;
+    height: auto
     `,
     Title: styled.div`
       font-family: Libre Baskerville, Georgia;
