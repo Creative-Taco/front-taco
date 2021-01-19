@@ -1,17 +1,21 @@
 import styled from 'styled-components';
+import tacoMask from '../../images/tacomasklarge.svg';
+
 // import { devices } from '../../styles/index.style'
 
 const About = {};
 
 About.Container = styled.div`
   height: 600px;
-  margin: 130px 44px 44px;
+  margin: 0 44px 44px;
 `;
 
 About.BlueBox = styled.div`
   background-color: #002a73;
   width: 100%;
   height: 100%;
+  background-image: url(${tacoMask});
+  background-repeat: repeat;
 `;
 
 About.Bold = styled.span`
@@ -19,15 +23,8 @@ About.Bold = styled.span`
   font-weight: bold;
 `;
 
-About.TacoMask = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-`;
-
 About.TextContainer = styled.div`
-  position: absolute;
-  top: 1030px;
+  position: relative;
   left: 280px;
   max-width: 500px;
 `;

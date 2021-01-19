@@ -1,6 +1,6 @@
 
 import Layout from './layout/Layout';
-import Landing from './views/Landing/Landing';
+import Hello from './views/Hello/Hello';
 import About from './views/About/About';
 import Example from './views/Example/Example';
 import Good from './views/Good/Good';
@@ -11,7 +11,7 @@ import './index.css';
 function App() {
   return (
       <Layout>
-        <Landing />
+        <Hello />
         <About />
         <Example />
         <Good />

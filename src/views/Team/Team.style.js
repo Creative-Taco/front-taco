@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../styles/index.style';
 
 const Team = {};
 
@@ -56,7 +57,25 @@ Team.Main = {
     Block: styled.div`
       margin-top: 64px;
     `,
-    Image: styled.img``,
+    Image: styled.img`
+    max-width: 430px;
+
+      @media ${devices.laptopL} {
+        max-width: 350px;
+      }
+
+      @media ${devices.laptopM} {
+        max-width: 300px;
+      }
+
+      @media ${devices.laptop} {
+        max-width: 250px;
+      }
+
+      @media ${devices.tablet} {
+        max-width: 200px;
+      }
+    `,
     Title: styled.div`
       font-family: Libre Baskerville, Georgia;
       font-size: 30px;
@@ -73,6 +92,7 @@ Team.Main = {
     Spacer: styled.div`
       margin-top: 464px;
       font-weight: 500;
+
     `,
   },
 };

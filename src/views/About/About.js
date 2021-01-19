@@ -1,5 +1,4 @@
 import About from './About.style';
-import tacoMask from '../../images/tacomasklarge.svg';
 import logoText from '../../images/logotext.png';
 
 function AboutView() {
@@ -17,7 +16,6 @@ function AboutView() {
             company.
           </About.Subtitle>
         </About.TextContainer>
-        <About.TacoMask src={tacoMask} alt='' />
       </About.BlueBox>
     </About.Container>
   );

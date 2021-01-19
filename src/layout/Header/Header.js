@@ -1,19 +1,32 @@
 import styled from 'styled-components';
 import tacoLogo from '../../images/tacologo.svg';
-
+import {devices} from '../../styles/index.style';
 const HeaderStyles = {};
 
-HeaderStyles.TacoIcon = styled.img`
-position: absolute;
-top 3.5%;
-left: 45px;
+HeaderStyles.Header = styled.div`
+  padding: 16px 42px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+
+  @media ${devices.tablet} {
+    display: none;
+  }
 `;
+HeaderStyles.TacoIcon = styled.img``;
 
 function Header() {
   return (
-    <div>
-      <a href='/'><HeaderStyles.TacoIcon src={tacoLogo} alt='' /></a>
-    </div>
+    <HeaderStyles.Header>
+      <div>
+        <a href='/'>
+          <HeaderStyles.TacoIcon src={tacoLogo} alt='' />
+        </a>
+      </div>
+    </HeaderStyles.Header>
   );
 }
 
