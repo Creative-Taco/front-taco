@@ -7,7 +7,7 @@ import useScroll from '../../utils/useScroll';
 
 function HelloView() {
   const { scrollY } = useScroll();
-  const [initialY, setInitalY] = useState(scrollY);
+  const [initialY] = useState(scrollY);
   const [containerProps, setContainer] = useSpring(() => ({ width: '50%' }));
   const [titleProps, setTitle] = useSpring(() => ({ opacity: 1,left: '30%' }));
 
@@ -19,8 +19,8 @@ function HelloView() {
     if (scrollY <= initialY) {
       setContainer({ width: '50%' });
       setTitle({opacity: 1, left: '30%'})
-      
     }
+    // eslint-disable-next-line
   }, [scrollY]);
 
   return (

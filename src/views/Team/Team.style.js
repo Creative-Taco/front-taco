@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices } from '../../styles/index.style';
+// import { devices } from '../../styles/index.style';
 
 const Team = {};
 
