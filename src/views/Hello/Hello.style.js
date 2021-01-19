@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { devices } from '../../styles/index.style';
 import tacoMask from '../../images/tacomasklarge.svg';
-import {animated} from 'react-spring'
+import { animated } from 'react-spring';
 
 // import {useSpring, animated} from 'react-spring';
 
@@ -11,11 +11,11 @@ Hello.Container = styled(animated.div)`
   margin: 44px 42px 0;
   background: #fff;
   width: 50%;
-  height: 130vh;
-  
+  height: 200vh;
+
   @media ${devices.tablet} {
     margin: 0;
-    height: 100vh;
+    height: 200vh;
   }
 `;
 
@@ -55,13 +55,13 @@ Hello.HeroText = styled(animated.div)`
 
 Hello.BlueBox = styled.div`
   background-color: #002a73;
-  height: 130vh;
+  height: 200vh;
   width: 100%;
   background-image: url(${tacoMask});
   background-repeat: repeat;
-  
+
   @media ${devices.tablet} {
-    height: 100vh;
+    height: 200vh;
   }
 `;
 

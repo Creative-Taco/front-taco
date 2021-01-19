@@ -4,7 +4,7 @@ const Example = {};
 
 Example.Container = styled.div`
     height: 600px;
-    margin: 130px 44px 44px;
+    margin: 0 44px 44px;
 `;
 
 Example.ExampleImage = styled.img`

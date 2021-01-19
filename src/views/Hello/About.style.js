@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 import tacoMask from '../../images/tacomasklarge.svg';
 
 // import { devices } from '../../styles/index.style'
@@ -19,12 +20,13 @@ About.BlueBox = styled.div`
 `;
 
 About.Bold = styled.span`
-  color: #F56B00;
+  color: #f56b00;
   font-weight: bold;
 `;
 
-About.TextContainer = styled.div`
-  position: relative;
+About.TextContainer = styled(animated.div)`
+  position: fixed;
+  top: 33%;
   left: 280px;
   max-width: 500px;
 `;

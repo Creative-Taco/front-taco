@@ -52,8 +52,8 @@ function FooterComponent() {
         </Footer.Text.Extrabold>
       </Footer.Section>
       <Footer.Section>
-        <div>United State</div>
-        <div>Spain</div>
+        {/* <div>United States</div>
+        <div>Spain</div> */}
         <Footer.Text.Link href='mailto: contactus@creative-taco.com'>
           contactus@creative-taco.com
         </Footer.Text.Link>
