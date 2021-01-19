@@ -12,7 +12,6 @@ Mission.Title = styled.div`
   top: 36px;
   left: 220px;
   z-index: 15;
-
 `;
 
 Mission.Banner = styled.img`
