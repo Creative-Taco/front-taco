@@ -9,7 +9,7 @@ function AboutView() {
         <About.TextContainer>
           <About.TacoLogoText src={logoText} />
           <About.Title>
-            We are creative taco, a web design and UI/UX development studio.
+            We are <About.Bold>creative taco</About.Bold>, a web design and UI/UX development studio.
           </About.Title>
           <br/>
           <About.Subtitle>
