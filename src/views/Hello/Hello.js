@@ -18,7 +18,6 @@ function HelloView() {
       setContainer({ width: '100%' });
       setTitle({ opacity: 0, left: '100%' });
       setAbout({ opacity: 1, top: '33%' });
-      console.log(scrollY)
     }
     if (scrollY <= 100) {
       setContainer({ width: '50%' });
