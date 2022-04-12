@@ -12,7 +12,7 @@ HeaderStyles.Header = styled.div`
   background-color: #fff;
   z-index: 10;
 
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
     display: none;
   }
 `;

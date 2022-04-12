@@ -11,7 +11,7 @@ Frame.Top = styled.div`
   height: 44px;
   top: 0;
   z-index: 5;
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
    display: none;
   }
 `;
@@ -23,7 +23,7 @@ Frame.Bottom = styled.div`
   height: 44px;
   bottom: 0;
   z-index: 5;
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
    display: none;
   }
 `;
@@ -35,7 +35,7 @@ Frame.Left = styled.div`
   width: 44px;
   left: 0;
   z-index: 5;
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
    display: none;
   }
 `;
@@ -47,7 +47,7 @@ Frame.Right = styled.div`
   width: 44px;
   right: 0;
   z-index: 5;
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
    display: none;
   }
 `;

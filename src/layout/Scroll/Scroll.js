@@ -23,7 +23,7 @@ function ScrollDown() {
     color: #fff;
     transform: rotate(-90deg);
 
-    @media ${devices.tablet} {
+    @media only screen and ${devices.tablet} {
       left: -12px;
       top: 610px;
     }
@@ -35,7 +35,7 @@ function ScrollDown() {
     top: 670px;
     margin: 0;
     
-    @media ${devices.tablet} {
+    @media only screen and ${devices.tablet} {
       left: 16px;
       top: 660px;
     }

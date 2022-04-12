@@ -1,19 +1,40 @@
 import React, { useEffect } from 'react';
 import { useSpring } from 'react-spring';
-
+import { devices } from '../../styles/index.style';
 import About from './About.style';
 import logoText from '../../images/logotext.png';
 import Hello from './Hello.style';
 import HeroText from '../../components/TitleText';
 import useScroll from '../../utils/useScroll';
+import useMedia from '../../utils/useMedia';
 
 function HelloView() {
   const { scrollY } = useScroll();
+
+  const titleTop = useMedia(
+    [devices.mobileL, devices.tablet, devices.laptop],
+    ['10%', '30%', '50%'],
+    '50%'
+  );
+  const titleLeft = useMedia(
+    [devices.mobileL, devices.tablet, devices.laptop],
+    ['20%', '25%', '30%'],
+    '30%'
+  );
+  console.log('titleTop titleLeft', titleTop, titleLeft);
+
   const [containerProps, setContainer] = useSpring(() => ({ width: '50%' }));
-  const [titleProps, setTitle] = useSpring(() => scrollY > 100 ? ({ opacity: 0, left: '100%' }) : ({ opacity: 1, left: '30%' }));
-  const [aboutProps, setAbout] = useSpring(() => scrollY > 100 ? ({ opacity: 1, top: '33%' }) : ({ opacity: 0, top: '20%' }));
+  const [titleProps, setTitle] = useSpring(() =>
+    scrollY > 100
+      ? { opacity: 0, left: '100%' }
+      : { opacity: 1, left: titleLeft, top: titleTop }
+  );
+  const [aboutProps, setAbout] = useSpring(() =>
+    scrollY > 100 ? { opacity: 1, top: '33%' } : { opacity: 0, top: '20%' }
+  );
 
   useEffect(() => {
+    console.log('test', scrollY);
     if (scrollY > 100) {
       setContainer({ width: '100%' });
       setTitle({ opacity: 0, left: '100%' });

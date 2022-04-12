@@ -13,9 +13,14 @@ Hello.Container = styled(animated.div)`
   width: 50%;
   height: 200vh;
 
-  @media ${devices.tablet} {
+  @media only screen and ${devices.mobileL} {
+    width: 50%;
+    height: 300vh;
+
+  }
+  
+  @media only screen and ${devices.tablet} {
     margin: 0;
-    height: 200vh;
   }
 `;
 
@@ -28,25 +33,28 @@ Hello.HeroText = styled(animated.div)`
   left: 30%;
   top: 50%;
 
-  @media ${devices.laptopM} {
+  @media only screen and ${devices.laptopM} {
     div {
       font-size: 150px;
     }
   }
 
-  @media ${devices.laptop} {
+  @media only screen and ${devices.laptop} {
     div {
       font-size: 120px;
     }
   }
 
-  @media ${devices.tablet} {
+  @media only screen and ${devices.tablet} {
     div {
       font-size: 80px;
     }
   }
 
-  @media ${devices.mobileL} {
+  @media only screen and ${devices.mobileL} {
+    top: 20%;
+    left: 10%;
+
     div {
       font-size: 60px;
     }
@@ -60,8 +68,8 @@ Hello.BlueBox = styled.div`
   background-image: url(${tacoMask});
   background-repeat: repeat;
 
-  @media ${devices.tablet} {
-    height: 200vh;
+  @media only screen and ${devices.tablet} {
+    height: 300vh;
   }
 `;
 
