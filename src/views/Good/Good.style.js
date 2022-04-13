@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Good = {};
 
 Good.Container = styled.div`
-  margin: 199px 0 0 191px;
+  margin: 360px 0 0 191px;
 `;
 
 Good.Title = {

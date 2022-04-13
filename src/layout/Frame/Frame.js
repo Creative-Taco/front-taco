@@ -3,9 +3,9 @@ import Frame from './Frame.style';
 function FrameLayout() {
   return (
     <>
-      <Frame.Right></Frame.Right>
-      <Frame.Bottom></Frame.Bottom>
-      <Frame.Left></Frame.Left>
+      <Frame.Right id="frame-right"></Frame.Right>
+      <Frame.Bottom id="frame-bottom"></Frame.Bottom>
+      <Frame.Left id="frame-left"></Frame.Left>
     </>
   );
 }

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Team = {};
 
 Team.Container = styled.div`
-  margin: 260px 0 0 191px;
+  margin: 200px 0 0 191px;
 `;
 
 Team.Title = styled.div`

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import arrowDown from '../../images/arrowdown.svg';
 import { devices } from '../../styles/index.style';
 
-function ScrollDown() {
-  const Scroll = {};
+const Scroll = {};
 
   Scroll.ScrollDownText = styled.p`
     position: fixed;
@@ -40,6 +39,8 @@ function ScrollDown() {
       top: 660px;
     }
   `;
+
+function ScrollDown() {
   return (
     <div>
       <Scroll.ScrollDownText>SCROLL</Scroll.ScrollDownText>

@@ -14,7 +14,7 @@ function MissionView() {
           reversed={true}
         />
       </Mission.Title>
-      <ParallaxImage image={missionbanner} blur={0} height={400} strength={150}>
+      <ParallaxImage image={missionbanner} blur={0} height={500} strength={150}>
       </ParallaxImage>
 
       <Mission.Block.Container>

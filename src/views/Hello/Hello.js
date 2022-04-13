@@ -1,75 +1,53 @@
 import React, { useEffect } from 'react';
-import { useSpring } from 'react-spring';
-import { devices } from '../../styles/index.style';
 import About from './About.style';
 import logoText from '../../images/logotext.png';
 import Hello from './Hello.style';
-import HeroText from '../../components/TitleText';
 import useScroll from '../../utils/useScroll';
-import useMedia from '../../utils/useMedia';
 
 function HelloView() {
   const { scrollY } = useScroll();
 
-  const titleTop = useMedia(
-    [devices.mobileL, devices.tablet, devices.laptop],
-    ['10%', '30%', '50%'],
-    '50%'
-  );
-  const titleLeft = useMedia(
-    [devices.mobileL, devices.tablet, devices.laptop],
-    ['20%', '25%', '30%'],
-    '30%'
-  );
-  console.log('titleTop titleLeft', titleTop, titleLeft);
-
-  const [containerProps, setContainer] = useSpring(() => ({ width: '50%' }));
-  const [titleProps, setTitle] = useSpring(() =>
-    scrollY > 100
-      ? { opacity: 0, left: '100%' }
-      : { opacity: 1, left: titleLeft, top: titleTop }
-  );
-  const [aboutProps, setAbout] = useSpring(() =>
-    scrollY > 100 ? { opacity: 1, top: '33%' } : { opacity: 0, top: '20%' }
-  );
-
   useEffect(() => {
-    console.log('test', scrollY);
-    if (scrollY > 100) {
-      setContainer({ width: '100%' });
-      setTitle({ opacity: 0, left: '100%' });
-      setAbout({ opacity: 1, top: '33%' });
+    if (scrollY > 0) {
+      console.log(scrollY);
+    } else {
+      console.log('at top');
     }
-    if (scrollY <= 100) {
-      setContainer({ width: '50%' });
-      setTitle({ opacity: 1, left: '30%' });
-      setAbout({ opacity: 0, top: '0%' });
-    }
-    if (scrollY > 1000) setAbout({ opacity: 0, top: '0%' });
-    // eslint-disable-next-line
   }, [scrollY]);
 
   return (
-    <Hello.Container style={containerProps}>
-      <Hello.Hero>
-        <Hello.HeroText style={titleProps}>
-          <HeroText text={'HELLO'} fullStop={true} size={200} />
-        </Hello.HeroText>
-        <Hello.BlueBox>
-          <About.TextContainer style={aboutProps}>
-            <About.TacoLogoText src={logoText} />
-            <About.Title>
-              We are <About.Bold>creative taco</About.Bold>, a web design and
-              UI/UX development studio.
-            </About.Title>
-            <br />
-            <About.Subtitle>
-              We will provide innovative and aesthetic solutions for your
-              startup company.
-            </About.Subtitle>
-          </About.TextContainer>
-        </Hello.BlueBox>
-      </Hello.Hero>
+    <Hello.Container id='hello-container'>
+      <Hello.Wrapper>
+        <Hello.Hero
+          id='hello-hero'
+          $isAtTop={scrollY <= 0}
+          $isPassed={scrollY >= 600}
+        >
+          <Hello.TitleText>
+            HELLO<Hello.TitleFullStop>.</Hello.TitleFullStop>
+          </Hello.TitleText>
+        </Hello.Hero>
+
+        <About.TextContainer
+          $isAtTop={scrollY <= 0}
+          $isComplete={scrollY >= 1100}
+        >
+          <About.TacoLogoText src={logoText} />
+          <About.Title>
+            We are <About.Bold>creative taco</About.Bold>, a web design and
+            UI/UX development studio.
+          </About.Title>
+          <br />
+          <About.Subtitle>
+            We will provide innovative and aesthetic solutions for your startup
+            company.
+          </About.Subtitle>
+        </About.TextContainer>
+
+        <Hello.BlueContainer id='hello-blue-container' $isAtTop={scrollY <= 0}>
+          <Hello.BlueBox id='hello-bluebox'></Hello.BlueBox>
+        </Hello.BlueContainer>
+      </Hello.Wrapper>
     </Hello.Container>
   );
 }

@@ -1,76 +1,94 @@
 import styled from 'styled-components';
 import { devices } from '../../styles/index.style';
 import tacoMask from '../../images/tacomasklarge.svg';
-import { animated } from 'react-spring';
-
-// import {useSpring, animated} from 'react-spring';
 
 const Hello = {};
 
-Hello.Container = styled(animated.div)`
-  margin: 44px 42px 0;
+Hello.Container = styled.div`
+  margin: 0px 42px;
   background: #fff;
-  width: 50%;
+  width: 100%;
+  overflow-y: hidden;
   height: 200vh;
-
   @media only screen and ${devices.mobileL} {
-    width: 50%;
-    height: 300vh;
-
-  }
-  
-  @media only screen and ${devices.tablet} {
-    margin: 0;
+    margin: 0px;
   }
 `;
 
-Hello.Hero = styled.div``;
+Hello.Wrapper = styled.div`
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+`;
 
-Hello.HeroText = styled(animated.div)`
+Hello.Hero = styled.div`
+  ${({ $isAtTop, $isPassed }) =>
+    $isAtTop
+      ? `
+        left: 30%;
+      `
+      : $isPassed
+      ? `
+        left: 80%;
+        opacity: 0;
+      `
+      : `
+        left: 80%;
+      `};
+  transition: left cubic-bezier(0.28, -0.4, 0.19, 1.21) 1s, opacity ease-in 0.3s;
+  transform: translateY(-50%);
+  top: 50%;
   position: fixed;
   max-width: 758px;
-  height: 208px;
-  left: 30%;
-  top: 50%;
-
-  @media only screen and ${devices.laptopM} {
-    div {
-      font-size: 150px;
-    }
-  }
-
-  @media only screen and ${devices.laptop} {
-    div {
-      font-size: 120px;
-    }
-  }
-
-  @media only screen and ${devices.tablet} {
-    div {
-      font-size: 80px;
-    }
-  }
-
+  z-index: 99;
+  overflow-wrap: break-word;
   @media only screen and ${devices.mobileL} {
-    top: 20%;
-    left: 10%;
-
-    div {
-      font-size: 60px;
-    }
+    transform: translateY(calc(-50% + 42px));
+    ${({ $isAtTop, $isPassed }) =>
+    $isAtTop
+      ? `
+        left: 30%;
+      ` : `
+        left: 80%;
+        opacity: 0;
+      `};
   }
+`;
+
+Hello.TitleText = styled.div`
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 200px;
+  line-height: 160px;
+
+  /* F56B00 */
+
+  color: ${(props) => (props.reversed ? '#002a73' : '#f56b00')};
+  @media only screen and ${devices.mobileL} {
+    font-size: 72px;
+    line-height: 160px;
+  }
+`;
+
+Hello.TitleFullStop = styled.span`
+  color: ${(props) => (props.reversed ? '#f56b00' : '#002a73')};
+`;
+
+Hello.BlueContainer = styled.div`
+  position: absolute;
+  z-index: 59;
+  height: 100%;
+  width: ${({ $isAtTop }) => ($isAtTop ? '50%' : '100%')};
+  transition: width cubic-bezier(0.28, -0.4, 0.19, 1.21) 1s;
 `;
 
 Hello.BlueBox = styled.div`
+  height: 100%;
   background-color: #002a73;
-  height: 200vh;
-  width: 100%;
   background-image: url(${tacoMask});
   background-repeat: repeat;
-
-  @media only screen and ${devices.tablet} {
-    height: 300vh;
-  }
 `;
 
 export default Hello;
