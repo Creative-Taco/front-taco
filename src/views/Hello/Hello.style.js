@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { devices } from '../../styles/index.style';
-import tacoMask from '../../images/tacomasklarge.svg';
 import longTacoMask from '../../images/tacomask-long.png';
 
 const Hello = {};
