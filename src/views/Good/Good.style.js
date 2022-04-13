@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { devices } from '../../styles/index.style';
 
 const Good = {};
 
 Good.Container = styled.div`
   margin: 360px 0 0 191px;
+  @media only screen and ${devices.tablet} {
+    margin: 360px 0 0 32px;
+  }
 `;
 
 Good.Title = {
@@ -41,6 +45,9 @@ Good.Explanation = {
     Container: styled.div`
       margin-top: 22px;
       display: flex;
+      @media only screen and ${devices.tablet} {
+        flex-direction: column;
+      }
     `,
     Item: styled.div``,
   },
@@ -64,7 +71,13 @@ Good.Explanation = {
       max-height: 600px;
       background-color: #002a73;
       padding: 80px 50px 20px 68px;
+      @media only screen and ${devices.tablet} {
+      padding: 40px 63px;
+      margin-left: -32px;
+      margin-top: 32px;
+      max-height: 1200px;
 
+      }
     `,
     Wrapper: styled.div`
       display: flex;

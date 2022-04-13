@@ -9,12 +9,13 @@ About.Bold = styled.span`
 `;
 
 About.TextContainer = styled.div`
-  ${({ $isAtTop, $isComplete }) => ($isAtTop || $isComplete ? `opacity: 0;` : `opacity: 1;`)};
+  ${({ $isAtTop, $isComplete }) =>
+    $isAtTop || $isComplete ? `opacity: 0;` : `opacity: 1;`};
   transition: opacity ease-in 0.3s;
   position: fixed;
   z-index: 99;
-    top: 50%;
-    transform: translateY(-50%);
+  top: 50%;
+  transform: translateY(-50%);
 
   left: 280px;
   max-width: 500px;
@@ -25,7 +26,6 @@ About.TextContainer = styled.div`
 
     width: 80%;
   }
-  
 `;
 
 About.TacoLogoText = styled.img`

@@ -5,9 +5,8 @@ function GoodView() {
     <Good.Container>
       <Good.Title.Section>
         <Good.Title.TitleText>
-        <HeroText text={'WHAT WE\'RE GOOD AT'} size={80} fullStop={true}/>
+          <HeroText text={"WHAT WE'RE GOOD AT"} size={80} fullStop={true} />
         </Good.Title.TitleText>
-
       </Good.Title.Section>
 
       <Good.Explanation.Flex.Container>

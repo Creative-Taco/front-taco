@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-// import { devices } from '../../styles/index.style';
+import { devices } from '../../styles/index.style';
 
 const Team = {};
 
 Team.Container = styled.div`
   margin: 200px 0 0 191px;
+  @media only screen and ${devices.mobileL} {
+    margin: 120px 0 0 32px;
+  }
 `;
 
 Team.Title = styled.div`

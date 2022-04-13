@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { devices } from '../../styles/index.style';
 import tacoMask from '../../images/tacomasklarge.svg';
+import longTacoMask from '../../images/tacomask-long.png';
 
 const Hello = {};
 
@@ -46,10 +47,11 @@ Hello.Hero = styled.div`
   @media only screen and ${devices.mobileL} {
     transform: translateY(calc(-50% + 42px));
     ${({ $isAtTop, $isPassed }) =>
-    $isAtTop
-      ? `
+      $isAtTop
+        ? `
         left: 30%;
-      ` : `
+      `
+        : `
         left: 80%;
         opacity: 0;
       `};
@@ -87,8 +89,9 @@ Hello.BlueContainer = styled.div`
 Hello.BlueBox = styled.div`
   height: 100%;
   background-color: #002a73;
-  background-image: url(${tacoMask});
-  background-repeat: repeat;
+  background-image: url(${longTacoMask});
+  background-size: 1400px;
+
 `;
 
 export default Hello;
