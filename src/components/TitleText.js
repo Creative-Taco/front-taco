@@ -24,9 +24,9 @@ const TitleFullStop = styled.span`
 const HeroText = ({ text, fullStop, size, reversed }) => {
   return (
     <>
-      <TitleText size={size}>
+      <TitleText size={size} reversed={reversed}>
         {text}
-        {fullStop ? <TitleFullStop>.</TitleFullStop> : null}
+        {fullStop ? <TitleFullStop reversed={reversed}>.</TitleFullStop> : null}
       </TitleText>
     </>
   );

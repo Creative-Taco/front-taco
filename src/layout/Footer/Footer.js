@@ -17,10 +17,13 @@ Footer.Container = styled.div`
 `;
 
 Footer.Section = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   max-width: 300px;
   padding-right: 160px;
   @media only screen and ${devices.mobileL} {
-    max-width: 400px;
     width: 100%;
     padding-right: 80px;
     margin-bottom: 16px;
@@ -28,7 +31,7 @@ Footer.Section = styled.div`
 `;
 Footer.Image = styled.img`
   @media only screen and ${devices.mobileL} {
-    display: none;
+    margin-top: 42px;
   }
 `;
 
@@ -38,12 +41,9 @@ Footer.Text = {
     color: #002a73;
     font-weight: 800;
     line-height: 42px;
-    @media only screen and ${devices.mobileL} {
-      display: none;
-    }
   `,
   Emphasis: styled.div`
-    margin-left: 42px;
+    margin-left: 48px;
     font-size: 14px;
     color: #646464;
     font-style: italic;
@@ -64,25 +64,28 @@ Footer.Text = {
 
 Footer.Arrow = styled.img`
   margin-right: 16px;
+  @media only screen and ${devices.mobileL} {
+    display: none;
+  }
 `;
 function FooterComponent() {
   return (
     <Footer.Container>
-      <Footer.Section>
+      <Footer.Section id='footer-section'>
         <Footer.Text.Emphasis>Like what you see?</Footer.Text.Emphasis>
         <Footer.Text.Extrabold>
           <Footer.Arrow src={arrowright} alt='' />
           CONTACT US
         </Footer.Text.Extrabold>
       </Footer.Section>
-      <Footer.Section>
+      <Footer.Section id='footer-section'>
         {/* <div>United States</div>
         <div>Spain</div> */}
         <Footer.Text.Link href='mailto: contactus@creative-taco.com'>
           contactus@creative-taco.com
         </Footer.Text.Link>
       </Footer.Section>
-      <Footer.Section>
+      <Footer.Section id='footer-section'>
         <Footer.Image src={footerlogo} alt='' />
       </Footer.Section>
     </Footer.Container>

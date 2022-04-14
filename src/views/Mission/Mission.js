@@ -2,8 +2,10 @@ import HeroText from '../../components/TitleText';
 import Mission from './Mission.style';
 import missionbanner from '../../images/missionbanner.png';
 import ParallaxImage from '../../components/ParallaxImage';
+import useWindowDimensions from '../../utils/useWindowDimensions';
 
 function MissionView() {
+  const { width } = useWindowDimensions();
   return (
     <Mission.Container>
       <Mission.Title>
@@ -14,8 +16,21 @@ function MissionView() {
           reversed={true}
         />
       </Mission.Title>
-      <ParallaxImage image={missionbanner} blur={0} height={500} strength={150}>
-      </ParallaxImage>
+      <ParallaxImage
+        image={missionbanner}
+        blur={0}
+        height={width < 425 ? 200 : 500}
+        strength={150}
+        bgStyles={
+          width < 425
+            ? {
+                width: '120%',
+                height: 'auto',
+                margin: '80px 0 40px',
+              }
+            : { width: '100%', height: 'auto', margin: '40px 0' }
+        }
+      ></ParallaxImage>
 
       <Mission.Block.Container>
         <Mission.Block.Column>
