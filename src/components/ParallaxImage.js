@@ -6,6 +6,9 @@ const ParallaxImage = ({ image, height, blur, bgImageAlt, strength, children }) 
     bgImage={image}
     bgImageAlt={bgImageAlt}
     strength={strength}
+    bgImageStyle={{maxWidth: '700px', height: 'auto', margin: '80px 0'}}
+
+
   >
     <div style={{ height: height }}>
     {children}

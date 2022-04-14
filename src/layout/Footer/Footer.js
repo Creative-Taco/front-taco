@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import footerlogo from '../../images/footerlogo.png';
 import arrowright from '../../images/arrowright.png';
+import { devices } from '../../styles/index.style';
+
 const Footer = {};
 
 Footer.Container = styled.div`
@@ -8,18 +10,37 @@ Footer.Container = styled.div`
   border-top: 1px solid #646464;
   padding: 60px 0;
   display: flex;
+  @media only screen and ${devices.mobileL} {
+    flex-direction: column;
+    margin: 0 36px;
+  }
 `;
 
 Footer.Section = styled.div`
   max-width: 300px;
   padding-right: 160px;
+  @media only screen and ${devices.mobileL} {
+    max-width: 400px;
+    width: 100%;
+    padding-right: 80px;
+    margin-bottom: 16px;
+  }
 `;
+Footer.Image = styled.img`
+  @media only screen and ${devices.mobileL} {
+    display: none;
+  }
+`;
+
 Footer.Text = {
   Extrabold: styled.div`
     font-size: 30px;
     color: #002a73;
     font-weight: 800;
     line-height: 42px;
+    @media only screen and ${devices.mobileL} {
+      display: none;
+    }
   `,
   Emphasis: styled.div`
     margin-left: 42px;
@@ -27,6 +48,9 @@ Footer.Text = {
     color: #646464;
     font-style: italic;
     font-family: Libre Baskerville, Georgia;
+    @media only screen and ${devices.mobileL} {
+      margin-left: 0;
+    }
   `,
   Normal: styled.div``,
   Link: styled.a`
@@ -59,7 +83,7 @@ function FooterComponent() {
         </Footer.Text.Link>
       </Footer.Section>
       <Footer.Section>
-        <img src={footerlogo} alt='' />
+        <Footer.Image src={footerlogo} alt='' />
       </Footer.Section>
     </Footer.Container>
   );

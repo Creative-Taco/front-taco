@@ -5,8 +5,8 @@ const Good = {};
 
 Good.Container = styled.div`
   margin: 360px 0 0 191px;
-  @media only screen and ${devices.tablet} {
-    margin: 360px 0 0 32px;
+  @media only screen and ${devices.mobileL} {
+    margin: 260px 0 0 32px;
   }
 `;
 
@@ -27,6 +27,9 @@ Good.Explanation = {
   Title: {
     Section: styled.div`
       margin-top: 80px;
+      @media only screen and ${devices.mobileL} {
+        margin-top: 40px;
+      }
     `,
     Bold: styled.div`
       font-size: 30px;
@@ -48,6 +51,9 @@ Good.Explanation = {
       @media only screen and ${devices.tablet} {
         flex-direction: column;
       }
+      @media only screen and ${devices.mobileL} {
+        margin-top: 0;
+      }
     `,
     Item: styled.div``,
   },
@@ -55,6 +61,9 @@ Good.Explanation = {
     Section: styled.div`
       margin-top: 90px;
       max-width: 290px;
+      @media only screen and ${devices.mobileL} {
+        margin-top: 40px;
+      }
     `,
     Title: styled.div`
       font-size: 16px;
@@ -72,11 +81,10 @@ Good.Explanation = {
       background-color: #002a73;
       padding: 80px 50px 20px 68px;
       @media only screen and ${devices.tablet} {
-      padding: 40px 63px;
-      margin-left: -32px;
-      margin-top: 32px;
-      max-height: 1200px;
-
+        padding: 40px 63px;
+        margin-left: -32px;
+        margin-top: 32px;
+        max-height: 1200px;
       }
     `,
     Wrapper: styled.div`
@@ -87,16 +95,23 @@ Good.Explanation = {
     BoxLeft: styled.div`
       min-width: 250px;
       margin: 0 36px 80px 0;
+      @media only screen and ${devices.mobileL} {
+        margin: 0 36px 40px 0;
+      }
     `,
     BoxRight: styled.div`
       min-width: 250px;
       margin: 0 15px 80px 0;
+      @media only screen and ${devices.mobileL} {
+        margin: 0 15px 40px 0;
+      }
     `,
     Title: styled.div`
       margin-bottom: 16px;
       font-size: 18px;
       color: #f56b00;
       font-weight: 800;
+
     `,
     List: styled.div`
       font-size: 22px;

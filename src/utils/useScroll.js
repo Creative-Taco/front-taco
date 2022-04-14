@@ -8,6 +8,7 @@ export const useScroll = () => {
     scrollX: document.body.getBoundingClientRect().left,
     scrollDirection: '', // down, up
   })
+  const [touchY, setTouchY] = useState(0);
 
   const handleScrollEvent = useCallback((e) => {
     setState((prevState) => {
@@ -24,21 +25,31 @@ export const useScroll = () => {
     })
   }, [])
 
+  const handleTouchMoveEvent = useCallback((e) => {
+    setTouchY(e.changedTouches[0].pageY);
+  }, [setTouchY])
+
   useEffect(() => {
     const scrollListener = (e) => {
       handleScrollEvent(e)
     }
+    const touchMoveListener = (e) => {
+      handleTouchMoveEvent(e)
+    }
     window.addEventListener('scroll', scrollListener)
+    window.addEventListener('touchmove', touchMoveListener)
 
     return () => {
       window.removeEventListener('scroll', scrollListener)
+      window.removeEventListener('touchmove', touchMoveListener)
     }
-  }, [handleScrollEvent])
+  }, [handleScrollEvent, handleTouchMoveEvent])
 
   return {
     scrollY: state.scrollY,
     scrollX: state.scrollX,
     scrollDirection: state.scrollDirection,
+    touchScrollY: touchY
   }
 }
 

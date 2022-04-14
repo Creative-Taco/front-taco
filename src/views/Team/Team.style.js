@@ -6,7 +6,7 @@ const Team = {};
 Team.Container = styled.div`
   margin: 200px 0 0 191px;
   @media only screen and ${devices.mobileL} {
-    margin: 120px 0 0 32px;
+    margin: 120px 32px 0;
   }
 `;
 
@@ -18,10 +18,16 @@ Team.Main = {
   Container: styled.div`
     display: flex;
     justify-content: flex-start;
+    @media only screen and ${devices.mobileL} {
+      flex-direction: column;
+    }
   `,
   Column: styled.div`
     max-width: 400px;
     margin-right: 40px;
+    @media only screen and ${devices.mobileL} {
+      margin-right: 0;
+    }
   `,
   Text: {
     Block: styled.div`
@@ -61,8 +67,8 @@ Team.Main = {
       margin-top: 64px;
     `,
     Image: styled.img`
-    width: 100%;
-    height: auto
+      width: 100%;
+      height: auto;
     `,
     Title: styled.div`
       font-family: Libre Baskerville, Georgia;
@@ -80,7 +86,9 @@ Team.Main = {
     Spacer: styled.div`
       margin-top: 464px;
       font-weight: 500;
-
+      @media only screen and ${devices.mobileL} {
+        margin-top: 40px;
+      }
     `,
   },
 };

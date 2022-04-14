@@ -5,15 +5,15 @@ import Hello from './Hello.style';
 import useScroll from '../../utils/useScroll';
 
 function HelloView() {
-  const { scrollY } = useScroll();
+  const { touchScrollY, scrollY } = useScroll();
 
   useEffect(() => {
-    if (scrollY > 0) {
-      console.log(scrollY);
+    if (scrollY > 0 || touchScrollY) {
+      console.log(touchScrollY, scrollY);
     } else {
       console.log('at top');
     }
-  }, [scrollY]);
+  }, [touchScrollY, scrollY]);
 
   return (
     <Hello.Container id='hello-container'>
@@ -22,6 +22,7 @@ function HelloView() {
           id='hello-hero'
           $isAtTop={scrollY <= 0}
           $isPassed={scrollY >= 600}
+          $mobileScroll={touchScrollY}
         >
           <Hello.TitleText>
             HELLO<Hello.TitleFullStop>.</Hello.TitleFullStop>
@@ -31,6 +32,7 @@ function HelloView() {
         <About.TextContainer
           $isAtTop={scrollY <= 0}
           $isComplete={scrollY >= 1100}
+          $mobileScroll={touchScrollY}
         >
           <About.TacoLogoText src={logoText} />
           <About.Title>
@@ -44,7 +46,7 @@ function HelloView() {
           </About.Subtitle>
         </About.TextContainer>
 
-        <Hello.BlueContainer id='hello-blue-container' $isAtTop={scrollY <= 0}>
+        <Hello.BlueContainer id='hello-blue-container' $isAtTop={scrollY <= 0} $mobileScroll={touchScrollY}>
           <Hello.BlueBox id='hello-bluebox'></Hello.BlueBox>
         </Hello.BlueContainer>
       </Hello.Wrapper>

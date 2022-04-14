@@ -1,11 +1,14 @@
 import Good from './Good.style';
 import HeroText from '../../components/TitleText';
+import useWindowDimensions from '../../utils/useWindowDimensions';
+
 function GoodView() {
+  const { width } = useWindowDimensions();
   return (
     <Good.Container>
       <Good.Title.Section>
         <Good.Title.TitleText>
-          <HeroText text={"WHAT WE'RE GOOD AT"} size={80} fullStop={true} />
+          <HeroText text={"WHAT WE'RE GOOD AT"} size={width < 425 ? 64 : 80} fullStop={true} />
         </Good.Title.TitleText>
       </Good.Title.Section>
 

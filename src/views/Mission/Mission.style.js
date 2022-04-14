@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { devices } from '../../styles/index.style';
 
 const Mission = {};
 
 Mission.Container = styled.div`
   margin: 330px 44px 150px;
+  @media only screen and ${devices.mobileL} {
+    margin: 30px 32px 64px;
+  }
 `;
 
 Mission.Title = styled.div`
@@ -12,6 +16,9 @@ Mission.Title = styled.div`
   top: 36px;
   left: 220px;
   z-index: 15;
+  @media only screen and ${devices.mobileL} {
+    position: static;
+  }
 `;
 
 Mission.Banner = styled.img`
@@ -22,6 +29,9 @@ Mission.Banner = styled.img`
 Mission.Block = {
   Container: styled.div`
     display: flex;
+    @media only screen and ${devices.mobileL} {
+      flex-direction: column;
+    }
   `,
   Column: styled.div``,
   Title: {
@@ -29,6 +39,9 @@ Mission.Block = {
       margin: 48px 0 0 230px;
       color: #f56b00;
       max-width: 300px;
+      @media only screen and ${devices.mobileL} {
+        margin: 48px 0 0 16px;
+      }
     `,
     Bold: styled.div`
       font-weight: 800;
@@ -48,6 +61,9 @@ Mission.Block = {
       margin: 48px 0 0 70px;
       color: #f56b00;
       max-width: 300px;
+      @media only screen and ${devices.mobileL} {
+        margin: 48px 0 0 16px;
+      }
     `,
     Bold: styled.div`
       font-size: 16px;

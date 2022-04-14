@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { devices } from '../../styles/index.style';
-import longTacoMask from '../../images/tacomask-long.png';
+// import longTacoMask from '../../images/tacomask-long.png';
+import longTacoMask from '../../images/taco-light.png';
 
 const Hello = {};
 
@@ -45,10 +46,11 @@ Hello.Hero = styled.div`
   overflow-wrap: break-word;
   @media only screen and ${devices.mobileL} {
     transform: translateY(calc(-50% + 42px));
-    ${({ $isAtTop, $isPassed }) =>
-      $isAtTop
+    ${({ $isAtTop, $touchScrollY }) =>
+      $isAtTop || $touchScrollY < 200
         ? `
-        left: 30%;
+        left:20%;
+        top: 50%;
       `
         : `
         left: 80%;
@@ -90,7 +92,6 @@ Hello.BlueBox = styled.div`
   background-color: #002a73;
   background-image: url(${longTacoMask});
   background-size: 1400px;
-
 `;
 
 export default Hello;

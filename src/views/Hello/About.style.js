@@ -25,6 +25,10 @@ About.TextContainer = styled.div`
     top: 50%;
 
     width: 80%;
+    ${({ $isAtTop, $isComplete, $touchScrollY }) =>
+      $isAtTop || $isComplete || ($touchScrollY < 200) | ($touchScrollY > 1400)
+        ? `opacity: 0;`
+        : `opacity: 1;`};
   }
 `;
 
