@@ -19,14 +19,14 @@ About.TextContainer = styled.div`
 
   left: 280px;
   max-width: 500px;
-  @media only screen and ${devices.mobileL} {
+  @media only screen and ${devices.tablet} {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
 
     width: 80%;
-    ${({ $isAtTop, $isComplete, $touchScrollY }) =>
-      $isAtTop || $isComplete || ($touchScrollY < 200) | ($touchScrollY > 1400)
+    ${({ $isAtTop, $isComplete, $mobileScroll }) =>
+      $isAtTop || $isComplete || ($mobileScroll < 200) | ($mobileScroll > 1400)
         ? `opacity: 0;`
         : `opacity: 1;`};
   }
@@ -34,7 +34,7 @@ About.TextContainer = styled.div`
 
 About.TacoLogoText = styled.img`
   margin-bottom: 50px;
-  @media only screen and ${devices.mobileL} {
+  @media only screen and ${devices.tablet} {
     width: 180px;
   }
 `;
@@ -42,7 +42,7 @@ About.TacoLogoText = styled.img`
 About.Title = styled.div`
   color: white;
   font-size: 30px;
-  @media only screen and ${devices.mobileL} {
+  @media only screen and ${devices.tablet} {
     font-size: 24px;
   }
 `;
@@ -50,7 +50,7 @@ About.Title = styled.div`
 About.Subtitle = styled.div`
   color: white;
   font-size: 24px;
-  @media only screen and ${devices.mobileL} {
+  @media only screen and ${devices.tablet} {
     font-size: 18px;
   }
 `;

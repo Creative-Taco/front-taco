@@ -4,7 +4,7 @@ import { devices } from '../../styles/index.style';
 const Mission = {};
 
 Mission.Container = styled.div`
-  margin: 330px 44px 150px;
+  margin: 144px 44px 150px;
   @media only screen and ${devices.mobileL} {
     margin: 30px 32px 64px;
   }
@@ -16,6 +16,10 @@ Mission.Title = styled.div`
   top: 36px;
   left: 220px;
   z-index: 15;
+  @media only screen and ${devices.desktop} {
+  top: 24px;
+    left: 0px;
+  }
   @media only screen and ${devices.mobileL} {
     position: static;
   }

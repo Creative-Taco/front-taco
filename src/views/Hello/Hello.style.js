@@ -45,7 +45,7 @@ Hello.Hero = styled.div`
   max-width: 758px;
   z-index: 99;
   overflow-wrap: break-word;
-  @media only screen and ${devices.mobileL} {
+  @media only screen and ${devices.tablet} {
     transform: translateY(calc(-50% + 42px));
     ${({ $isAtTop, $touchScrollY }) =>
       $isAtTop || $touchScrollY < 200
@@ -70,7 +70,13 @@ Hello.TitleText = styled.div`
   /* F56B00 */
 
   color: ${(props) => (props.reversed ? '#002a73' : '#f56b00')};
-  @media only screen and ${devices.mobileL} {
+  @media only screen and (max-width: 1000px) {
+    font-size: 140px;
+  }
+  @media only screen and (max-width: 640px) {
+    font-size: 100px;
+  }
+  @media only screen and (max-width: 476px) {
     font-size: 72px;
     line-height: 160px;
   }
