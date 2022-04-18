@@ -36,6 +36,7 @@ Hello.Hero = styled.div`
       `
       : `
         left: 80%;
+        opacity: 0;
       `};
   transition: left cubic-bezier(0.28, -0.4, 0.19, 1.21) 1s, opacity ease-in 0.3s;
   transform: translateY(-50%);
