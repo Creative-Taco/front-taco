@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import About from './About.style';
 import logoText from '../../images/logotext.png';
 import Hello from './Hello.style';
@@ -7,13 +6,13 @@ import useScroll from '../../utils/useScroll';
 function HelloView() {
   const { touchScrollY, scrollY } = useScroll();
 
-  useEffect(() => {
-    if (scrollY > 0 || touchScrollY) {
-      console.log(touchScrollY, scrollY);
-    } else {
-      console.log('at top');
-    }
-  }, [touchScrollY, scrollY]);
+  // useEffect(() => {
+  //   if (scrollY > 0 || touchScrollY) {
+  //     console.log(touchScrollY, scrollY);
+  //   } else {
+  //     console.log('at top');
+  //   }
+  // }, [touchScrollY, scrollY]);
 
   return (
     <Hello.Container id='hello-container'>

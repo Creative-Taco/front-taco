@@ -41,7 +41,7 @@ function GoodView() {
 
         <Good.Explanation.Block.Container>
           <Good.Explanation.Block.Wrapper>
-            <Good.Explanation.Block.BoxLeft>
+            <Good.Explanation.Block.Box>
               <Good.Explanation.Block.Title>
                 Design
               </Good.Explanation.Block.Title>
@@ -60,9 +60,9 @@ function GoodView() {
                   Digital illustration
                 </Good.Explanation.Block.Item>
               </Good.Explanation.Block.List>
-            </Good.Explanation.Block.BoxLeft>
+            </Good.Explanation.Block.Box>
 
-            <Good.Explanation.Block.BoxRight>
+            <Good.Explanation.Block.Box>
               <Good.Explanation.Block.Title>
                 Digital &amp; Mobile
               </Good.Explanation.Block.Title>
@@ -83,9 +83,9 @@ function GoodView() {
                   Web apps
                 </Good.Explanation.Block.Item>
               </Good.Explanation.Block.List>
-            </Good.Explanation.Block.BoxRight>
+            </Good.Explanation.Block.Box>
 
-            <Good.Explanation.Block.BoxLeft>
+            <Good.Explanation.Block.Box>
               <Good.Explanation.Block.Title>
                 Community
               </Good.Explanation.Block.Title>
@@ -106,9 +106,9 @@ function GoodView() {
                   Analytics
                 </Good.Explanation.Block.Item>
               </Good.Explanation.Block.List>
-            </Good.Explanation.Block.BoxLeft>
+            </Good.Explanation.Block.Box>
 
-            <Good.Explanation.Block.BoxRight>
+            <Good.Explanation.Block.Box>
               <Good.Explanation.Block.Title>
                 Web Development
               </Good.Explanation.Block.Title>
@@ -125,7 +125,7 @@ function GoodView() {
                 <Good.Explanation.Block.Item>React</Good.Explanation.Block.Item>
                 <Good.Explanation.Block.Item>Node</Good.Explanation.Block.Item>
               </Good.Explanation.Block.List>
-            </Good.Explanation.Block.BoxRight>
+            </Good.Explanation.Block.Box>
           </Good.Explanation.Block.Wrapper>
         </Good.Explanation.Block.Container>
       </Good.Explanation.Flex.Container>

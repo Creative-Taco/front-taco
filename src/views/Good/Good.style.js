@@ -5,14 +5,20 @@ const Good = {};
 
 Good.Container = styled.div`
   margin: 360px 0 0 191px;
+  @media only screen and ${devices.tablet} {
+    margin: 260px 0 0 64px;
+  }
   @media only screen and ${devices.mobileL} {
-    margin: 260px 0 0 32px;
+    margin: 260px 0 0 0;
   }
 `;
 
 Good.Title = {
   Section: styled.div`
     max-width: 700px;
+    @media only screen and ${devices.mobileL} {
+      margin: 0 0 0 32px;
+    }
   `,
   TitleText: styled.div`
     color: #f56b00;
@@ -23,7 +29,11 @@ Good.Title = {
 };
 
 Good.Explanation = {
-  Section: styled.div``,
+  Section: styled.div`
+    @media only screen and ${devices.mobileL} {
+      margin: 0 0 0 32px;
+    }
+  `,
   Title: {
     Section: styled.div`
       margin-top: 80px;
@@ -48,7 +58,7 @@ Good.Explanation = {
     Container: styled.div`
       margin-top: 22px;
       display: flex;
-      @media only screen and ${devices.tablet} {
+      @media only screen and (max-width: 900px) {
         flex-direction: column;
       }
       @media only screen and ${devices.mobileL} {
@@ -77,33 +87,31 @@ Good.Explanation = {
     Container: styled.div`
       margin-left: 186px;
       max-width: 720px;
-      max-height: 600px;
       background-color: #002a73;
       padding: 80px 50px 20px 68px;
-      @media only screen and ${devices.tablet} {
+      @media only screen and (max-width: 900px) {
         padding: 40px 63px;
         margin-left: -32px;
         margin-top: 32px;
-        max-height: 1200px;
+      }
+      @media only screen and ${devices.tablet} {
+        max-width: initial;
       }
     `,
     Wrapper: styled.div`
       display: flex;
       flex-wrap: wrap;
       max-width: 600px;
-    `,
-    BoxLeft: styled.div`
-      min-width: 250px;
-      margin: 0 36px 80px 0;
-      @media only screen and ${devices.mobileL} {
-        margin: 0 36px 40px 0;
+      @media only screen and (max-width: 1320px) {
+        max-width: 360px;
       }
     `,
-    BoxRight: styled.div`
-      min-width: 250px;
-      margin: 0 15px 80px 0;
+    Box: styled.div`
+      min-width: 190px;
+      margin: 0 36px 36px 0;
+
       @media only screen and ${devices.mobileL} {
-        margin: 0 15px 40px 0;
+        /* margin: 0 15px 40px 0; */
       }
     `,
     Title: styled.div`
@@ -111,7 +119,6 @@ Good.Explanation = {
       font-size: 18px;
       color: #f56b00;
       font-weight: 800;
-
     `,
     List: styled.div`
       font-size: 22px;

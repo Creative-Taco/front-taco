@@ -7,6 +7,7 @@ const Scroll = {};
 
   Scroll.ScrollDownText = styled.p`
     position: fixed;
+    z-index: 999999;
     width: 64px;
     height: 11px;
     left: 36px;
@@ -24,19 +25,20 @@ const Scroll = {};
 
     @media only screen and ${devices.tablet} {
       left: -12px;
-      top: 610px;
+      top: 80%;
     }
   `;
 
   Scroll.ScrollDownImage = styled.img`
     position: fixed;
+    z-index: 999999;
     left: 64px;
     top: 670px;
     margin: 0;
     
     @media only screen and ${devices.tablet} {
       left: 16px;
-      top: 660px;
+      top: calc(80% + 48px);
     }
   `;
 
